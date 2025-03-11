@@ -1,14 +1,17 @@
-pipeline
+ pipeline
 {
 agent any
 stages
 {
+stage('clone')
+{
+steps{
 git "https://github.com/Bhuvanaramisetti/new-.git"
 }
 }
 stage('build')
 {
-steps{
+steps{ 
 sh 'javac Hello.java'
 }
 }
@@ -16,7 +19,7 @@ stage('run')
 {
 steps
 {
-sh 'javac Hello.java'
+sh 'javac Hello.java' 
 }
 }
 }
