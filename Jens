@@ -3,4 +3,21 @@ pipeline
 agent any
 stages
 {
-git 
+git "https://github.com/Bhuvanaramisetti/new-.git"
+}
+}
+stage('build')
+{
+steps{
+sh 'javac Hello.java'
+}
+}
+stage('run')
+{
+steps
+{
+sh 'java Hello.java'
+}
+}
+}
+}
